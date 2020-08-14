@@ -43,6 +43,7 @@ def update
   DB[:conn].execute(sql,self.name,self.breed, self.id)
 
 end
+
 def self.new_from_db(row)
   new_dog = Dog.new
   new_dog.id = row[0]
