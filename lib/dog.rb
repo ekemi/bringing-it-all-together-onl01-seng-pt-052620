@@ -50,4 +50,9 @@ def self.new_from_db(row)
   new_dog.breed = row[2]
   new_dog
 end
+def self.create(name:,breed:)
+  dog = Dog.new(name,breed)
+  dog.save
+  dog
+end
 end
